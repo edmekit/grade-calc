@@ -1,4 +1,4 @@
-def calculate(scorefile, overfile, part):
+def calculate(sub, scorefile, overfile, part):
     scores = int(input("Enter quiz score: "))
     over = int(input("How many items? "))
     grade = []
@@ -23,17 +23,17 @@ def calculate(scorefile, overfile, part):
                 overall.append(int(total))
 
     quiz = (sum(grade) / sum(overall)) * part
-    print("For exercises, you have a grade of ", quiz)
+    print("For exercises in ", sub," you have a grade of ", quiz)
 
 subject = input("Enter subject: ")
 
 if subject == "MATH 27":
-    calculate("scores/mathscores.txt", "scores/mathover.txt", 40)
+    calculate("MATH 27","scores/mathscores.txt", "scores/mathover.txt", 40)
 
 elif subject == "CMSC 56":
-    calculate("scores/cmsc56scores.txt", "scores/cmsc56over.txt", 60)
+    calculate("CMSC 56","scores/cmsc56scores.txt", "scores/cmsc56over.txt", 35)
 
 elif subject == "CMSC 12":
-    calculate("scores/cmsc12scores.txt", "scores/cmsc12over.txt", 60)
+    calculate("CMSC 12","scores/cmsc12scores.txt", "scores/cmsc12over.txt", 45)
 
 
